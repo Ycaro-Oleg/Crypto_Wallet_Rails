@@ -1,5 +1,15 @@
 {
   "name": "crypto_wallet_rails52",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "jquery": "^3.7.1",
+    "notify-js-legacy": "^0.4.1",
+    "popper.js": "^1.16.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Ycaro-Oleg/Crypto_Wallet_Rails.git",
+  "author": "Ycaro-Oleg <ycaro.oleg@gmail.com>",
+  "license": "MIT"
 }

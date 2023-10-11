@@ -19,17 +19,19 @@ namespace :dev do
         { description: "Bitcoin",
           acronym: "BTC",
           url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/800px-Bitcoin.svg.png" },
-
+          mining_type: MiningType.find_by(acronym: 'PoW')
         {
           description: "Etherium",
           acronym: "ETH",
           url_image: "https://ethereum.org/static/5022dfe8d23b106be4d3d2b021accd46/8cb4c/eth-diamond-black-gray.png",
+          mining_type: MiningType.all.sample
         },
 
         {
           description: "Dash",
           acronym: "DSH",
           url_image: "https://logowik.com/content/uploads/images/dash9065.jpg",
+          mining_type: MiningType.all.sample
         },
       ]
       

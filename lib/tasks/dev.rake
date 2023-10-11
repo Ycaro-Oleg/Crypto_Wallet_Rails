@@ -4,9 +4,9 @@ namespace :dev do
     if Rails.env.development?
       show_spinner("Apagando BD...") { %x(rails db:drop) }
       show_spinner("Criando BD... ") { %x(rails db:create) }
-      show_spinner("Migrando BD...") { %x(rails db:migrate) }
-       %x(rails dev:add_coins) 
+      show_spinner("Migrando BD...") { %x(rails db:migrate) }      
        %x(rails dev:add_mining_types) 
+       %x(rails dev:add_coins) 
     else
       puts "Voce nao esta em ambiente de desenvolvimento!"
     end
@@ -18,8 +18,9 @@ namespace :dev do
       coins = [
         { description: "Bitcoin",
           acronym: "BTC",
-          url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/800px-Bitcoin.svg.png" },
+          url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/800px-Bitcoin.svg.png" ,
           mining_type: MiningType.find_by(acronym: 'PoW')
+        },
         {
           description: "Etherium",
           acronym: "ETH",
